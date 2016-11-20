@@ -127,7 +127,7 @@ padding-top:25px
 	<div data-role="header" data-theme="c">
 	  <h1>Pay My Bill</h1>
 	</div>
-<form action="connect.php"  method="post">
+<form>
 <table>
 <tr> 
 <td width="250px">
@@ -209,6 +209,7 @@ padding-top:25px
 	<div data-role="header" data-theme="c">
 	  <h1>Login</h1>
 	</div>
+<form action="connect.php" method="post">
     <table>
     <tr >
     <td width="100px">
@@ -219,6 +220,7 @@ padding-top:25px
 	  <input type="text" name="userName" id="usrName" value=""  />
   </div>
   </td>
+  </tr>
   <tr>
   <td>
 	<div data-role="fieldcontain" >
@@ -229,10 +231,15 @@ padding-top:25px
   </div>
   </td>
   </tr>
+  <tr><td>
+  <input type="button" value="Submit">
+  </td></tr>
   </table>
+</form>
 <div>
 	<a href="#Register">New User</a>
 </div>
+<div>
 	<div data-role="footer" data-theme="c">
 	  <h4>Mobile Dog Groomer</h4>
 	</div>

@@ -1,15 +1,19 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
+  <meta charset="UTF-8">
+  <title>Inisope Employee Directory</title>
+  <Style> 
+table,th,td {border:1px solid black;
+border-collapse: collapse;}
+th, td {padding: 5px}
+</Style>
 </head>
-
 <body>
-<?php
+ <?php
 $servername = "us-cdbr-azure-central-a.cloudapp.net";
 $username = "b24e9b033208c7";
-$password = "07884f4b";;
+$password = "07884f4b";
 $dbname = "groomer";
 
 // Create connection
@@ -18,23 +22,30 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
- / Pass appropriate SQL to the database
-  $lname = $_POST["name"];
-  $fname = $_POST["usr_name"];
-  $email = $_POST["email"];
   
-  $sql = "select name, usr_name, email from `clients`;
+// Pass appropriate SQL to the database
+  $name = $_POST["NAME"];
+  $usr_name = $_POST["USR_NAME"];
+  $email = $_POST["EMAIL"];
+  
+  $sql = "SELECT `NAME`, `USR_NAME`, `EMAIL` FROM `clients` WHERE `USR_NAME` like 'Kai'";
 
  $result = $conn->query($sql);
   if ($result->num_rows > 0) {
    // Output data of each row
    printf("\n\t<table><tr><th>%s</th><th>%s</th><th>%s</th>",
-       "Name", "User Name", "Email";
+       "Name", "User Name", "Email");
     while ($row = $result->fetch_assoc()) {
-    printf("<tr> <td>%s</td> <td>%s</td>
-    <td><a href=mailto:%s>%s</a>
-    </td> <td>%s</td></tr>",
-         $row["FNAME"], $row["LNAME"], $row["EMAIL"], 
+    printf("<tr> <td>%s</td> <td>%s</td><td>%s</td></tr>",
+         $row["NAME"], $row["USR_NAME"], $row["EMAIL"]); 
+
+  }
+          // printf("%s, %s<br>", $row["LNAME"], $row["FNAME"]);
+echo "</table>\n";
+   
+  } else {
+   echo "0 results <br>";
+  }
 $conn->close();
 ?>
 </body>
