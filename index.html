@@ -129,19 +129,20 @@ padding-top:25px
 	</div>
 <form>
 <table>
-<tr> 
-<td width="250px">
   <div data-role="fieldcontain">
+  <tr> 
+<td width="250px">
     <label for="textinput" >Full Name as it Appears on Card:</label>
     </td>
     <td width="800px">
     <input type="text" name="fullName" id="fullName" value=""  />
     </td>
+      </tr>
   </div>
-  </tr>
-  <tr>
-  <td>
+
   <div data-role="fieldcontain">
+    <tr>
+  <td>
     <fieldset data-role="controlgroup" data-type="horizontal" >
       <legend>Card Type:</legend>
       </td>
@@ -155,11 +156,14 @@ padding-top:25px
       <input type="radio" name="creditCard" id="creditCard_2" value="" />
       <label for="creditCard_2">Discover</label>
     </fieldset>
+      </td>
+
   </div>
-  </td>
+
+
+<div data-role="fieldcontain">
   <tr>
   <td>
-<div data-role="fieldcontain">
     <label for="textinput">Card Number:</label>
   </td>
   <td>
@@ -173,12 +177,16 @@ padding-top:25px
     </td>
     <td>
     <input type="text" name="lastThree" id="lastThree" value=""  />
+    </td>
   </div>
-</td>
-<tr>
-<td>
+
+
+
 <div data-role="fieldcontain" align="left">
+
   <fieldset data-role="controlgroup">
+  <tr>
+<td>
     <legend>Services Rendered</legend>
     </td>
     </tr>
@@ -192,50 +200,52 @@ padding-top:25px
     <label for="services_2">Flea Bath</label>
     <input type="checkbox" name="services" id="services_3" class="custom" value="" />
     <label for="services_3">Fur Trim</label>
-  </fieldset>
-</div> 
-</td>
+      </td>
 </tr>
-
-</table>
-<div> 
+  </fieldset>
+</table> 
 </form>
+</div>
+<div> 
+
 	<div data-role="footer" data-theme="c">
 	  <h4>Mobile Dog Groomer</h4>
 	</div>
 </div>
-</div>
+
 <div id="Login" data-role="page" data-theme="c" data-add-back-btn="true">
 	<div data-role="header" data-theme="c">
 	  <h1>Login</h1>
 	</div>
-<form action="connect.php" method="post">
+<form action="./connect.php" method="post">
     <table>
-    <tr >
-    <td width="100px">
 	<div data-role="fieldcontain">
+        <tr >
+    <td width="100px">
 	  <label for="textinput">User Name:</label>
       </td>
       <td width="500px">
 	  <input type="text" name="userName" id="usrName" value=""  />
-  </div>
-  </td>
+        </td>
   </tr>
-  <tr>
-  <td>
+  </div>
+
 	<div data-role="fieldcontain" >
+      <tr>
+      <td>
 	  <label for="passwordinput">Password:</label>
       </td>
       <td>
 	  <input name="passwordinput" type="password" id="passwordinput"  />
-  </div>
-  </td>
+        </td>
   </tr>
+  </div>
   <tr><td>
-  <input type="button" value="Submit">
+<button type="submit">Submit</button>
   </td></tr>
   </table>
 </form>
+</div>
 <div>
 	<a href="#Register">New User</a>
 </div>

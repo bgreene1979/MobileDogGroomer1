@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Inisope Employee Directory</title>
-  <Style> 
-table,th,td {border:1px solid black;
-border-collapse: collapse;}
-th, td {padding: 5px}
-</Style>
+<meta charset="utf-8">
+<title>Untitled Document</title>
 </head>
 <body>
- <?php
+<?php
 $servername = "us-cdbr-azure-central-a.cloudapp.net";
 $username = "b24e9b033208c7";
 $password = "07884f4b";
@@ -48,5 +43,6 @@ echo "</table>\n";
   }
 $conn->close();
 ?>
+</body>
 </body>
 </html>
