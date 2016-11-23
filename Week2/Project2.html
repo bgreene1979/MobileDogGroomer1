@@ -63,6 +63,12 @@ body  {
 
 
 </style>
+<?PHP
+
+$username = $_POST['login_name'];
+print ($username);
+
+?>
 </head> 
 <body f.style.background="images/bubbles.jpg">
 
@@ -230,7 +236,7 @@ body  {
 	<div data-role="fieldcontain">
         <tr >
     <td width="100px">
-	  <label for="textinput">User Name:</label>
+	  <label for="textinput" name = "login_name">User Name:</label>
       </td>
       <td width="500px">
 	  <input type="text" name="userName" id="usrName" value=""  />
@@ -244,7 +250,7 @@ body  {
 	  <label for="passwordinput">Password:</label>
       </td>
       <td>
-	  <input name="passwordinput" type="password" id="passwordinput"  />
+	  <input name="passwordinput" type="password" id="passwordinput" name ="login_pass"  />
         </td>
   </tr>
   </div>
