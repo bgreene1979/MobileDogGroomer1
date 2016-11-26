@@ -24,13 +24,13 @@ if ($conn->connect_error) {
 } 
   
 
-  $name = $_POST["NAME"];
+  $name = $_GET["NAME"];
   $USR_NAME = $_GET["USR_NAME"];
-  $email = $_POST["EMAIL"];
+  $email = $_GET["EMAIL"];
   
   printf("Hello", $USR_NAME);
   
-  $sql = "SELECT `NAME`, `USR_NAME`, `EMAIL` FROM `clients` WHERE `USR_NAME` =  '$USR_NAME'  ";
+  $sql = "SELECT `NAME`, `USR_NAME`, `EMAIL` FROM `clients` ";
 
  $result = $conn->query($sql);
   if ($result->num_rows > 0) {
