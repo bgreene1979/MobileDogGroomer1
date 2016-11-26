@@ -39,10 +39,10 @@ if ($conn->connect_error) {
        "Name", "User Name", "Email");
     while ($row = $result->fetch_assoc()) {
     printf("<tr> <td>%s</td> <td>%s</td><td>%s</td></tr>",
-         $row["NAME"], $row["login_name"], $row["EMAIL"]); 
+         $row["NAME"], $row["USR_NAME"], $row["EMAIL"]); 
 
   }
-          // printf("%s, %s<br>", $row["LNAME"], $row["FNAME"]);
+
 echo "</table>\n";
    
   } else {
