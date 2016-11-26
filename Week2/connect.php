@@ -28,9 +28,9 @@ if ($conn->connect_error) {
   $USR_NAME = $_GET["USR_NAME"];
   $email = $_GET["EMAIL"];
   
-  printf("Hello", $USR_NAME);
+  printf("Hello", "USR_NAME");
   
-  $sql = "SELECT `NAME`, `USR_NAME`, `EMAIL` FROM `clients` ";
+  $sql = "SELECT `NAME`, `USR_NAME`, `EMAIL ` FROM `clients` where `USR_NAME` = 'Latifah' ";
 
  $result = $conn->query($sql);
   if ($result->num_rows > 0) {
