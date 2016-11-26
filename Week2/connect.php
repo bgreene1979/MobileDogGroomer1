@@ -25,12 +25,12 @@ if ($conn->connect_error) {
   
 
   $name = $_POST["NAME"];
-  $usr_name = $_GET["login_name"];
+  $USR_NAME = $_GET["USR_NAME"];
   $email = $_POST["EMAIL"];
   
-  printf("Hello", $usr_name);
+  printf("Hello", $USR_NAME);
   
-  $sql = "SELECT `NAME`, `USR_NAME`, `EMAIL` FROM `clients` WHERE `USR_NAME` like  '$usr_name' ";
+  $sql = "SELECT `NAME`, `USR_NAME`, `EMAIL` FROM `clients` WHERE `USR_NAME` like  '$USR_NAME' ";
 
  $result = $conn->query($sql);
   if ($result->num_rows > 0) {
@@ -39,7 +39,7 @@ if ($conn->connect_error) {
        "Name", "User Name", "Email");
     while ($row = $result->fetch_assoc()) {
     printf("<tr> <td>%s</td> <td>%s</td><td>%s</td></tr>",
-         $row["NAME"], $row["USR_NAME"], $row["EMAIL"]); 
+         $row["NAME"], $row["login_name"], $row["EMAIL"]); 
 
   }
           // printf("%s, %s<br>", $row["LNAME"], $row["FNAME"]);
