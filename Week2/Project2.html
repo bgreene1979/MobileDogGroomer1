@@ -65,7 +65,7 @@ body  {
 </style>
 <?PHP
 
-$username = $_POST['login_name'];
+$username = $_GET['login_name'];
  $sql = "SELECT `NAME`, `USR_NAME`, `EMAIL` FROM `clients` WHERE `USR_NAME` like $username";
 
 ?>
