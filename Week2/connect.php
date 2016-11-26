@@ -27,7 +27,7 @@ if ($conn->connect_error) {
   $name = $_POST["NAME"];
   $usr_name = $_GET["login_name"];
   $email = $_POST["EMAIL"];
-  
+  printf($usr_name);
   $sql = "SELECT `NAME`, `USR_NAME`, `EMAIL` FROM `clients` WHERE `USR_NAME` like  '$usr_name' ";
 
  $result = $conn->query($sql);
