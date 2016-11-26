@@ -30,7 +30,7 @@ if ($conn->connect_error) {
   
   //printf("Hello", "USR_NAME");
   
-$sql = "SELECT NAME, USR_NAME, EMAIL FROM clients WHERE USR_NAME LIKE '%$USR_NAME%'";
+$sql = "SELECT NAME, USR_NAME, EMAIL FROM clients WHERE USR_NAME = '$USR_NAME'";
 
  $result = $conn->query($sql);
   if ($result->num_rows > 0) {
