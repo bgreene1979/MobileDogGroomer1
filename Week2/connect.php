@@ -25,7 +25,7 @@ if ($conn->connect_error) {
   
 
   //$name = $_GET["NAME"];
-  //$USR_NAME = $_GET["USR_NAME"];
+  $USR_NAME = $_GET["USR_NAME"];
   //$email = $_GET["EMAIL"];
   
   //printf("Hello", "USR_NAME");
