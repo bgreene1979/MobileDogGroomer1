@@ -22,7 +22,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-  
+
 
   //$name = $_GET["NAME"];
   $USR_NAME = $_GET["USR_NAME"];
@@ -30,7 +30,7 @@ if ($conn->connect_error) {
   
   //printf("Hello", "USR_NAME");
   
-$sql = "SELECT NAME, USR_NAME, EMAIL FROM clients where NAME like '%USR_NAME%'";
+$sql = "SELECT NAME, USR_NAME, EMAIL FROM clients WHERE USR_NAME = '$USR_NAME'";
 
  $result = $conn->query($sql);
   if ($result->num_rows > 0) {
