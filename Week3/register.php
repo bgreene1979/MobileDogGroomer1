@@ -30,7 +30,8 @@ if ($conn->connect_error) {
   
   //printf("Hello", "USR_NAME");
   
-$sql = "SELECT CLIENTS.NAME, USR_NAME, EMAIL, PETS.NAME, AGE, TYPE FROM clients join pets on clients.pet_id = pets.ID where USR_NAME like '%USR_NAME%'";
+$sql = "SELECT CLIENTS.NAME, USR_NAME, EMAIL, PETS.NAME, AGE, TYPE FROM clients join pets on clients.pet_id = pets.ID where USR_NAME like '$USR_NAME'";
+
 
 //$sql = "SELECT NAME, USR_NAME, EMAIL FROM clients WHERE USR_NAME = '$USR_NAME'";
 
