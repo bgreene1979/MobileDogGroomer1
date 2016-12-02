@@ -25,12 +25,12 @@ if ($conn->connect_error) {
   
 
   //$name = $_GET["NAME"];
-  $USER_NAME = $_GET["USER_NAME"];
+  $USR_NAME = $_GET["USR_NAME"];
   //$email = $_GET["EMAIL"];
   
   //printf("Hello", "USR_NAME");
   
-$sql = "SELECT CLIENTS.NAME, USER_NAME, EMAIL, PETS.NAME, AGE, TYPE FROM clients join pets on clients.pet_id = pets.ID where NAME like '%USER_NAME%'";
+$sql = "SELECT CLIENTS.NAME, USR_NAME, EMAIL, PETS.NAME, AGE, TYPE FROM clients join pets on clients.pet_id = pets.ID where NAME like '%USR_NAME%'";
 
  $result = $conn->query($sql);
   if ($result->num_rows > 0) {
