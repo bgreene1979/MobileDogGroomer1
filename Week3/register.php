@@ -32,6 +32,8 @@ if ($conn->connect_error) {
   
 $sql = "SELECT CLIENTS.NAME, USR_NAME, EMAIL, PETS.NAME, AGE, TYPE FROM clients join pets on clients.pet_id = pets.ID where NAME like '%USR_NAME%'";
 
+//$sql = "SELECT NAME, USR_NAME, EMAIL FROM clients WHERE USR_NAME = '$USR_NAME'";
+
  $result = $conn->query($sql);
   if ($result->num_rows > 0) {
    // Output data of each row
