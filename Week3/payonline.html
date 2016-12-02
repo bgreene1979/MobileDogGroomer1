@@ -22,6 +22,13 @@ body {
 h3{
 	font:normal 12pt arial;
 }
+label{
+font: normal 12pt arial;	
+}
+
+legend{
+font: normal 12pt arial;	
+}
 </style>
 </head>
 
@@ -30,11 +37,71 @@ h3{
 	<header>
 	  <h1>Online Payments</h1>
 	</header>
-	<div data-role="content">
-	  <h3>This is where you make appointments</h3>
-	</div>
-	<div data-role="footer" data-theme="c">
-	  <h4>Mobile Dog Groomer</h4>
+	<form>
+<table align="center" cellpadding="10">
+
+  <tr> 
+<td width="250px">
+    <label >Full Name as it Appears on Card:</label>
+    </td>
+    <td width="800px">
+    <input type="text" name="fullName" id="fullName" value=""  />
+    </td>
+      </tr>
+  </div>
+
+
+    <tr>
+  <td>
+      <label>Card Type:</label>
+      </td>
+      <td>
+      <input type="radio" name="creditCard" id="creditCard_0" value="" />
+      <label for="creditCard_0">Visa</label>
+      <input type="radio" name="creditCard" id="creditCard_1" value="" />
+      <label for="creditCard_1">Master Card</label>
+      <input type="radio" name="creditCard" id="creditCard_2" value="" />
+      <label for="creditCard_2">Discover</label
+      </td>
+<div >
+  <tr>
+  <td>
+    <label for="textinput">Card Number:</label>
+  </td>
+  <td>
+    <input type="text" name="cardNumber" id="cardNumber" value=""  />
+  </div>
+  </td>
+  <tr>
+  <td>
+<div data-role="fieldcontain">
+    <label for="textinput">Security code as it appears on the back:</label>
+    </td>
+    <td>
+    <input type="text" name="lastThree" id="lastThree" value=""  />
+    </td>
+  </div>
+<div>
+
+  <tr>
+<td>
+    <legend>Services Rendered</legend>
+    </td>
+    <td>
+    <input type="checkbox" name="services" id="services_0" class="custom" value="" />
+    <label for="services_0">Shampoo</label>
+    <input type="checkbox" name="services" id="services_1" class="custom" value="" />
+    <label for="services_1">Nail Trim</label>
+    <input type="checkbox" name="services" id="services_2" class="custom" value="" />
+    <label for="services_2">Flea Bath</label>
+    <input type="checkbox" name="services" id="services_3" class="custom" value="" />
+    <label for="services_3">Fur Trim</label>
+      </td>
+</tr>
+
+</table> 
+</form>
+	  <footer>Mobile Dog Groomer</footer>
 	</div>
 </div>
 </body>

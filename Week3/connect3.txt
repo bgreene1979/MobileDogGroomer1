@@ -1,3 +1,4 @@
+@@ -0,0 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,13 +25,13 @@ if ($conn->connect_error) {
 } 
   
 
-  //$name = $_GET["NAME"];
+//   $name = $_POST["NAME"];
   $USR_NAME = $_GET["USR_NAME"];
-  //$email = $_GET["EMAIL"];
+//   $email = $_POST["EMAIL"];
   
-  //printf("Hello", "USR_NAME");
+//   printf("Hello", $USR_NAME);
   
-$sql = "SELECT NAME, USER_NAME, AGE, order_id, items_ordered FROM data join orders on data.order_id = orders.ID where NAME like '%USR_NAME%'";
+  $sql = "SELECT NAME, USR_NAME, EMAIL FROM clients WHERE USR_NAME LIKE '%$USR_NAME%'";
 
  $result = $conn->query($sql);
   if ($result->num_rows > 0) {
@@ -52,3 +53,4 @@ $conn->close();
 ?>
 </body>
 </html>
+\ No newline at end of file
