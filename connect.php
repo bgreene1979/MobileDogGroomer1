@@ -1,4 +1,3 @@
-@@ -0,0 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,15 +22,32 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-  
 
-//   $name = $_POST["NAME"];
+
+  //$name = $_GET["NAME"];
   $USR_NAME = $_GET["USR_NAME"];
-//   $email = $_POST["EMAIL"];
+  //$email = $_GET["EMAIL"];
   
-//   printf("Hello", $USR_NAME);
+  //printf("Hello", "USR_NAME");
   
-  $sql = "SELECT NAME, USR_NAME, EMAIL FROM clients WHERE USR_NAME LIKE '%$USR_NAME%'";
+$sql = "SELECT NAME, USR_NAME, EMAIL FROM clients WHERE USR_NAME = '$USR_NAME'";
+
+if ($query_does_not_execute) {
+    $errcode = "error_code=003";
+}
+
+$referer = $_SERVER['HTTP_REFERER'];
+
+if ($errcode) {
+    if (strpos($referer, '?') === false) {
+        $referer .= "?";
+    }
+
+    header("Location: $referer&$errcode");
+} else {
+    header("Location: $referer");
+}
+exit;
 
  $result = $conn->query($sql);
   if ($result->num_rows > 0) {
@@ -53,4 +69,3 @@ $conn->close();
 ?>
 </body>
 </html>
-\ No newline at end of file

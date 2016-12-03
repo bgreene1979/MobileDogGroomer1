@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<style>
+body {
+    background-image: url("images/bubbles.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+header, footer {
+    padding: 1em;
+    color: black;
+    background-color: flex;
+    clear: left;
+    text-align: center;
+	font:normal 12pt arial;
+}
+
+label{
+font: normal 12pt arial;	
+}
+
+legend{
+font: normal 12pt arial;	
+}
+</style>
+</head>
+
+<body>
+<div>
+  <header>
+    <h1>New User</h1>
+  </header>
+  <div>
+  <form action="register.php" method="get">
+  <table align="center" cellpadding="10">
+  <tr>
+  <td width = "150">
+    <div>
+      <label for="textinput">Full Name:</label>
+      </td>
+      <td>
+      <input type="text" name="fullName" id="fullName" value="" width="1700">
+      </td>
+      </tr>
+      <tr>
+      </tr>
+    </div>
+   <tr>
+   <td>
+    <div>
+      <label for="textinput">User Name:</label> 
+      </td>
+      <td>
+      <input type="text" name="USR_NAME" id="USR_NAME" value=""  />
+    </div>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <div>
+      <label for="passwordinput2">Password:</label>
+      </td>
+      <td>
+      <input type="password" name="passwordInput2" id="passwordInput2" value=""  />
+    </div>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <div>
+      <label for="email">Email:</label>
+      </td>
+      <td>
+      <input type="text" name="email" id="email" value=""  />
+    </div>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <div>
+      <label for="textinput">Pet Name:</label>
+      </td>
+      <td>
+      <input type="text" name="petName" id="petName" value=""  />
+    </div>
+    </td>
+    </tr>
+    <tr>
+    <td>
+        <label>Pet Type:</label>
+        </td>
+        <td>
+        <input type="checkbox" name="Pets" id="Pets_0" class="custom" value="" />
+        <label for="Pets_0">Dog</label>
+        <input type="checkbox" name="Pets" id="Pets_1" class="custom" value="" />
+        <label for="Pets_1">Cat</label>
+		<input type="checkbox" name="Pets" id="Pets_1" class="custom" value="" />
+        <label for="Pets_1">Ferret</label>
+    </td>
+    </tr>
+      <tr>
+      <td>
+      <div >
+        <label for="textinput">Pet Age:</label>
+        </td>
+        <td>
+        <input type="text" name="ageInput" id="ageInput" value=""  />
+      </div>
+      </td>
+      </tr>
+      <tr>
+      <td>
+	<button type="submit" >Submit</button>
+    </td>
+ </tr>
+      </table>
+    </form>
+    </div>
+   <footer>
+    <h4>Mobile Dog Groomer</h4>
+  </footer>
+</body>
+</html>
