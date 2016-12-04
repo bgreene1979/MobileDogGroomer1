@@ -32,22 +32,7 @@ if ($conn->connect_error) {
   
 $sql = "SELECT NAME, USR_NAME, EMAIL FROM clients WHERE USR_NAME = '$USR_NAME'";
 
-if ($query_does_not_execute) {
-    $errcode = "error_code=003";
-}
-
-$referer = $_SERVER['HTTP_REFERER'];
-
-if ($errcode) {
-    if (strpos($referer, '?') === false) {
-        $referer .= "?";
-    }
-
-    header("Location: $referer&$errcode");
-} else {
-    header("Location: $referer");
-}
-exit;
+header("Location: index.html");
 
  $result = $conn->query($sql);
   if ($result->num_rows > 0) {
