@@ -26,17 +26,52 @@ font: normal 12pt arial;
 a{
 font: normal 12pt arial;	
 }
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    //position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #ADD8E6;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
 </style>
 </head>
 
 <body background="images/bubbles.jpg">
+
 <div data-role="page">
 	<header>
 	  <h1>Login</h1>
 	</header>
+    <ul>
+ 	 <li><a class="active" href="index.html">Home</a></li>
+  	<li><a href="appointments.html">Appointments</a></li>
+  	<li><a href="ask.html">Ask the Groomer</a></li>
+  	<li><a href="payonline.html">Pay Online</a></li>
+	</ul>
 	<div>
 	  <form action="connect.php" method="get">
-    <table>
+    <table align = "center">
 	<div>
         <tr >
     <td width="100px">
@@ -64,7 +99,9 @@ font: normal 12pt arial;
   </table>
   <br>
   <br>
+  <div align="center">
   <a href="register.html" class="link" >New User</a>
+  </div>
 </form>
 	</div>
 	<footer>
