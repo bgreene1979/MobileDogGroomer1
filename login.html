@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
 	Height:100%;
@@ -25,55 +26,91 @@ font: normal 12pt arial;
 }
 
 a{
-font: normal 12pt arial;	
+font: normal 12pt arial;
+align-content:center;	
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    //position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #ADD8E6;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
 }
 </style>
 </head>
 
 <body background="images/bubbles.jpg">
-<div data-role="page">
+<div data-role="page"   class ="container">
 	<header>
 	  <h1>Login</h1>
 	</header>
-	<div>
+    <div>
+    <div class="col-sm-6">
+    <ul>
+ 	 <li><a class="active" href="index.html">Home</a></li>
+  	<li><a href="appointments.html">Appointments</a></li>
+  	<li><a href="ask.html">Ask the Groomer</a></li>
+  	<li><a href="payonline.html">Pay Online</a></li>
+	</ul>
+    </div>
+  <div class="col-sm-4">
 	  <form action="connect.php" method="get">
-    <table>
-	<div>
-        <tr >
-    <td width="100px">
-	  <label for="textinput" font-family: Arial>User Name:</label>
-      </td>
-      <td width="500px">
-	  <input type="text" name="USR_NAME" id="USR_NAME" value=""  />
-        </td>
-  </tr>
-  </div>
+<table align="center">
+        <tr>
+    		<td width="100px">
+	 			<label for="textinput" font-family: Arial>User Name:</label>
+      		</td>
+      		<td width="500px">
+	  			<input type="text" name="USR_NAME" id="USR_NAME" value=""  />
+        	</td>
+  		</tr>
+
 
 	<div>
-      <tr>
-      <td>
-	  <label for="passwordinput">Password:</label>
-      </td>
-      <td>
-	  <input name="passwordinput" type="password" id="passwordinput"  />
-        </td>
-  </tr>
+    	<tr>
+      		<td>
+	 		 <label for="passwordinput">Password:</label>
+      		</td>
+      		<td>
+	  		<input name="passwordinput" type="password" id="passwordinput"  />
+        	</td>
+  	   </tr>
   </div>
-  <tr><td>
-<button type="submit" >Submit</button>
-  </td></tr>
+  		<tr>
+  			<td>
+				<button type="submit" >Submit</button>
+  			</td>
+  		</tr>
   </table>
   <br>
   <br>
-  <a href="register.html" class="link" >New User</a>
+  <a href="register.html" class="link">New User</a>
 </form>
-	</div>
-    <div>
-    Hello <?PHP $USR_NAME ?>
     </div>
 	<footer>
 	  <h4>Mobile Dog Groomer</h4>
 	</footer>
+
+</div>
 </div>
 </body>
 </html>
