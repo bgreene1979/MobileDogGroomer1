@@ -32,7 +32,7 @@ if ($conn->connect_error) {
   
 $sql = "SELECT NAME, USR_NAME, EMAIL FROM clients WHERE USR_NAME = '$USR_NAME'";
 
-header("Location: index.html");
+header("Location: login.html");
 
  $result = $conn->query($sql);
   if ($result->num_rows > 0) {
