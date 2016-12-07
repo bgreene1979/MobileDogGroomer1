@@ -36,6 +36,8 @@ header("Location: login.html");
 
  $result = $conn->query($sql);
   if ($result->num_rows > 0) {
+	header("Location: login.html");
+	printf("Hello ""USR_NAME");
    // Output data of each row
    printf("\n\t<table><tr><th>%s</th><th>%s</th><th>%s</th>",
        "Name", "User Name", "Email");
