@@ -83,6 +83,23 @@ a.link {font-family:arial;
 Mobile Dog Groomer
 </title>
 <body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '580338315507422',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 
 <div>
 <header>
@@ -92,9 +109,7 @@ Mobile Dog Groomer
 <div align="center">
 <img src="images/bull_bath.jpg" width="250" height="125" alt="">
 </div>
-<div>
-<?php if (isset($USR_NAME)) { echo "<p>Hello, $USR_NAME</p>"; } ?>
-</div>
+
 <div align="center" text="Arial">
     <a href="Login.html" class="link" >Login/Register</a>
     </div>
