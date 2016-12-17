@@ -1,0 +1,146 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+body {
+    background-image: url("images/bubbles.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+header, footer {
+    padding: 1em;
+    color: black;
+    background-color: flex;
+    clear: left;
+    text-align: center;
+	font: normal 12pt arial;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 100;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+
+.myButton {
+	width:200px;
+	-moz-box-shadow: 4px 6px 0px 0px #4d1bc2;
+	-webkit-box-shadow: 4px 6px 0px 0px #4d1bc2;
+	box-shadow: 4px 6px 0px 0px #4d1bc2;
+	background-color:#4825e6;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #511bcf;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:17px 26px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #210a85;
+}
+.myButton:hover {
+	background-color:#3d1d78;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+a.link {font-family:arial;
+		color:#0B09C1}
+
+</style>
+</head>
+<title>
+Mobile Dog Groomer
+</title>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '580338315507422',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div>
+<header>
+<div class="logo"><img src="images/appheader.jpg"alt=""  width="350px" height="125px" id="bone" /></div>
+	</div>
+</header>
+<div align="center">
+<img src="images/bull_bath.jpg" width="250" height="125" alt="">
+</div>
+
+<div align="center" text="Arial">
+    <a href="Login.html" class="link" >Login/Register</a>
+    </div>
+<div align="center" padding-top:100px> 	
+<br>
+		<a href="Appointments.html" class="myButton" data-transition="slidedown">Appointments</a>
+ <br>
+</div>
+<div align="center" padding-top:25px>
+ <br>
+        <a href="checkstatus.html" class="myButton" data-transition="slidedown">Check Status</a>
+<br>	
+</div>
+
+<div align="center" padding-top:25px>
+ <br>
+         <a href="ask.html" class="myButton" data-transition="slidedown">Ask the Groomer</a>	
+ <br>
+</div>
+<div align="center" padding-top:25px>
+ <br>
+          <a href="payonline.html" class="myButton" data-transition="slidedown">Pay Online</a>	
+</div>	
+	</div>
+
+
+
+<footer>Mobile Dog Groomer</footer>
+
+</div>
+
+
+</body>
+</html>
