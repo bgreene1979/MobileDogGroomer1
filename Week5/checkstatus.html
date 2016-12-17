@@ -23,20 +23,37 @@ h3{
 	font:normal 12pt arial;
 }
 </style>
-   <button class="alert">Notify Me!</button>
 <script>
-var Notification = window.Notification || window.mozNotification || window.webkitNotification;
+	var Notification = window.Notification || window.mozNotification || window.webkitNotification;
 
 	Notification.requestPermission(function (permission) {
-		//spawnNotification('Please Come Get your pet');
+		// console.log(permission);
 	});
-	
-//function spawnNotification(theBody) {
- // var options = {
-   // body: theBody
-  //}
 
+	function show() {
+		var instance = new Notification(
+			"Please Pick up your pet", {
+				body: "Your pet is ready"
+			}
+		);
+
+		instance.onclick = function () {
+			// Something to do
+		};
+		instance.onerror = function () {
+			// Something to do
+		};
+		instance.onshow = function () {
+			// Something to do
+		};
+		instance.onclose = function () {
+			// Something to do
+		};
+
+		return false;
+	}
 </script>
+
 </head>
 
 <body background="images/bubbles.jpg" background-size = cover>
@@ -47,7 +64,7 @@ var Notification = window.Notification || window.mozNotification || window.webki
 	<div >
 	  <h3>This is where you check the status of your pet</h3>
 	</div>
- 
+ <button type="button" onclick="show()">Notify me!</button>
 	<footer>
 	  <h4>Mobile Dog Groomer</h4>
 	</footer>
